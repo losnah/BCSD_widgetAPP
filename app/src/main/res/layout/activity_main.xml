@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6798FD"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="176dp"
+        android:text="0"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="193dp"
+        android:text="Toast" />
+
+    <Button
+        android:id="@+id/btn_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="193dp"
+        android:onClick="onButtonClicked"
+        android:text="Count" />
+
+    <Button
+        android:id="@+id/btn_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="193dp"
+        android:onClick="onButtonClicked"
+        android:text="Random" />
+</RelativeLayout>
