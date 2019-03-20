@@ -19,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView tv_count;
-    private Button btn_toast ;
-    private Button btn_count ;
-    private Button btn_random;
+    private TextView mCountTextview;
+    private Button mToastButton ;
+    private Button mCountButton ;
+    private Button mRandomButton;
     private int count = 0;
 
    //NotificationManager notificationManager;
@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tv_count = (TextView)findViewById(R.id.activity_main_textview_count);
-        btn_toast = (Button)findViewById(R.id.activity_main_button_toast);
+        mCountTextview = (TextView)findViewById(R.id.activity_main_textview_count);
+        mToastButton = (Button)findViewById(R.id.activity_main_button_toast);
 
-        btn_toast.setOnClickListener(new View.OnClickListener() {
+        mToastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(),"number is "+tv_count.getText().toString(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"number is "+mCountTextview.getText().toString(),Toast.LENGTH_SHORT).show();
                 show();
             }
         });
@@ -46,12 +46,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void onButtonClicked(View view){
-        btn_count = (Button)findViewById(R.id.activity_main_button_count);
-        btn_random = (Button)findViewById(R.id.activity_main_button_random);
+        mCountButton = (Button)findViewById(R.id.activity_main_button_count);
+        mRandomButton = (Button)findViewById(R.id.activity_main_button_random);
 
         switch (view.getId()){
             case R.id.activity_main_button_count:
-                tv_count.setText(String.valueOf(++count));
+                mCountTextview.setText(String.valueOf(++count));
                 break;
             case R.id.activity_main_button_random:
                /* intent = PendingIntent.getActivity(this, 0, new Intent(getApplicationContext(), MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
     // IMPLEMENT 상속 받아서 사용하는 방법
-    //위에서 btn_count.setOnClickListener(this)
+    //위에서 mCountButton.setOnClickListener(this)
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String selectedText = items[pos].toString();
                 if(selectedText == "positive"){
                     count = 0;
-                    tv_count.setText(count+"");
+                    mCountTextview.setText(count+"");
                 }else if(selectedText == "neutral"){
                     Toast.makeText(getApplicationContext(),"토스트메세지~",Toast.LENGTH_SHORT).show();
                 }

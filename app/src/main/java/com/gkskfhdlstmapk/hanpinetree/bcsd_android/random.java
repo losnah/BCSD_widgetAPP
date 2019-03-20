@@ -13,19 +13,19 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class random extends Fragment {
-    private TextView textView_random_count;
-    private Button buttonFinish;
+    private TextView mRandomCountTextview;
+    private Button mFinishButton;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.activity_random, container,false);
 
-        textView_random_count = (TextView)rootView.findViewById(R.id.activity_random_textview_random_count);
+        mRandomCountTextview = (TextView)rootView.findViewById(R.id.activity_random_textview_random_count);
        Random random = new Random();
        int count = 16;
-       buttonFinish = (Button)rootView.findViewById(R.id.buttonFinish);
-       buttonFinish.setOnClickListener(new View.OnClickListener() {
+        mFinishButton = (Button)rootView.findViewById(R.id.activity_random_finish_button);
+        mFinishButton.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                //Intent intent = new Intent(getContext(), MyService.class);
@@ -41,7 +41,7 @@ public class random extends Fragment {
        }catch (URISyntaxException e){
        }
        */
-        textView_random_count.setText(String.valueOf(random.nextInt(count)));
+        mRandomCountTextview.setText(String.valueOf(random.nextInt(count)));
 
         return rootView;
 }
