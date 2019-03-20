@@ -19,9 +19,9 @@ public class MyService extends Service {
     public String CHANNEL_ID = "channel";
     public String CHANNEL_NAME = "ㅠㅠ";
     public int notificationId = 1;
-    NotificationManagerCompat notificationManager;
-    NotificationCompat.Builder builder;
-    Intent notificationIntent;
+    private NotificationManagerCompat notificationManager;
+    private NotificationCompat.Builder builder;
+    private Intent notificationIntent;
 
     public MyService() {
     }

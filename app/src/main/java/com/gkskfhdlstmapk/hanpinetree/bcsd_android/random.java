@@ -23,8 +23,8 @@ import java.util.Random;
 import java.util.RandomAccess;
 
 public class random extends Fragment {
-    TextView tv_random_count;
-    Button buttonFinish;
+    private TextView textView_random_count;
+    private Button buttonFinish;
 
     String TAG = Random.class.getName(); //이런식으로 TAG값을 얻어낼 수도 있다.
     //
@@ -33,7 +33,7 @@ public class random extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.activity_random, container,false);
 
-       tv_random_count = (TextView)rootView.findViewById(R.id.tv_random_count);
+        textView_random_count = (TextView)rootView.findViewById(R.id.tv_random_count);
        Random random = new Random();
        int count = 16;
        buttonFinish = (Button)rootView.findViewById(R.id.buttonFinish);
@@ -53,7 +53,7 @@ public class random extends Fragment {
        }catch (URISyntaxException e){
        }
        */
-       tv_random_count.setText(String.valueOf(random.nextInt(count)));
+        textView_random_count.setText(String.valueOf(random.nextInt(count)));
 
         return rootView;
 }
