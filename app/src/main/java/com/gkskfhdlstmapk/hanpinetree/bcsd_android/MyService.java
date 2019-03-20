@@ -85,6 +85,7 @@ public class MyService extends Service {
         builder.setContentText("끝났습니다.")
                 .setProgress(100,100,false);
         notificationManager.notify(notificationId, builder.build());
+        notificationManager.cancel(notificationId);
 
         /*
         mBuilder.setProgress(0,0,false);

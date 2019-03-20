@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setAutoCancel(true)
                         .setContentIntent(intent);
 
+
                 notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
                 notificationManager.notify(0, builder.build());
 */
