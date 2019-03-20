@@ -7,32 +7,31 @@
     android:background="#6798FD"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/tv_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="188dp"
-        android:layout_marginLeft="188dp"
-        android:layout_marginTop="176dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginBottom="248dp"
         android:text="0"
         android:textColor="#ffffff"
         android:textSize="50sp" />
 
     <Button
         android:id="@+id/btn_toast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
-        android:layout_marginBottom="193dp"
-        android:text="Toast" />
+        android:layout_marginBottom="85dp"
+        android:background="@drawable/customimagebutton" />
 
     <Button
         android:id="@+id/btn_count"
@@ -42,20 +41,42 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="153dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginBottom="193dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginBottom="85dp"
+        android:background="@drawable/custombutton"
         android:onClick="onButtonClicked"
-        android:text="Count" />
+        android:text="Count"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_random"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="150dp"
-        android:layout_marginBottom="193dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginLeft="255dp"
+        android:layout_marginBottom="85dp"
         android:onClick="onButtonClicked"
-        android:text="Random" />
+        android:text="Random"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+        <fragment
+            android:id="@+id/myFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:name="com.gkskfhdlstmapk.hanpinetree.bcsd_android.random"/>
+    </FrameLayout>
+
+
 </RelativeLayout>
