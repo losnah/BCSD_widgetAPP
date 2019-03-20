@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    //접근 지정자 꼭 써줄 것!!
     private TextView tv_count;
     private Button btn_toast ;
     private Button btn_count ;
@@ -33,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tv_count = (TextView)findViewById(R.id.tv_count);
-        btn_toast = (Button)findViewById(R.id.btn_toast);
+        tv_count = (TextView)findViewById(R.id.activity_main_textview_count);
+        btn_toast = (Button)findViewById(R.id.activity_main_button_toast);
 
         btn_toast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,14 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void onButtonClicked(View view){
-        btn_count = (Button)findViewById(R.id.btn_count);
-        btn_random = (Button)findViewById(R.id.btn_random);
+        btn_count = (Button)findViewById(R.id.activity_main_button_count);
+        btn_random = (Button)findViewById(R.id.activity_main_button_random);
 
         switch (view.getId()){
-            case R.id.btn_count:
+            case R.id.activity_main_button_count:
                 tv_count.setText(String.valueOf(++count));
                 break;
-            case R.id.btn_random:
+            case R.id.activity_main_button_random:
                /* intent = PendingIntent.getActivity(this, 0, new Intent(getApplicationContext(), MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
                 Notification.Builder builder = new Notification.Builder(this)
                          .setSmallIcon(R.drawable.ic_launcher_background) // 아이콘 설정하지 않으면 오류남
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_count:
+            case R.id.activity_main_button_count:
                 break;
             default:
         }
